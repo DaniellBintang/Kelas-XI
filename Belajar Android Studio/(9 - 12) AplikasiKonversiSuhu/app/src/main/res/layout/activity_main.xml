@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header Section -->
+
+        <!-- Input Section -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/header_background"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="Temperature Icon"
+                android:src="@drawable/temperature" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Konversi Suhu"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Konverter suhu sederhana dan akurat"
+                android:textColor="#E1F5FE"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Masukkan Suhu"
+                android:textColor="#1976D2"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nilai suhu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextSuhu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- Conversion Type Selection -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔄 Pilih Jenis Konversi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="16dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupKonversi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioCelciusToReamur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌡️ Celsius → Reamur"
+                    android:textSize="16sp"
+                    android:textColor="#424242"
+                    android:padding="12dp"
+                    android:background="@drawable/radio_button_background"
+                    android:layout_marginBottom="8dp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radioCelciusToFahrenheit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌡️ Celsius → Fahrenheit"
+                    android:textSize="16sp"
+                    android:textColor="#424242"
+                    android:padding="12dp"
+                    android:background="@drawable/radio_button_background"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radioCelciusToKelvin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌡️ Celsius → Kelvin"
+                    android:textSize="16sp"
+                    android:textColor="#424242"
+                    android:padding="12dp"
+                    android:background="@drawable/radio_button_background"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radioReamurToCelcius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌡️ Reamur → Celsius"
+                    android:textSize="16sp"
+                    android:textColor="#424242"
+                    android:padding="12dp"
+                    android:background="@drawable/radio_button_background"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radioReamurToFahrenheit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌡️ Reamur → Fahrenheit"
+                    android:textSize="16sp"
+                    android:textColor="#424242"
+                    android:padding="12dp"
+                    android:background="@drawable/radio_button_background" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- Convert Button -->
+        <Button
+            android:id="@+id/buttonKonversi"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🔄 KONVERSI SUHU"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="20dp"
+            android:elevation="6dp" />
+
+        <!-- Result Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/result_background"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Hasil Konversi"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/textViewHasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masukkan suhu dan pilih jenis konversi"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1B5E20"
+                android:gravity="center"
+                android:background="#E8F5E8"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/textViewFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="#4CAF50"
+                android:gravity="center"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <!-- Clear Button -->
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🗑️ RESET"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/clear_button_background"
+            android:elevation="4dp" />
+
+        <!-- Footer Info -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Created by DaniellBintang • 2025"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>

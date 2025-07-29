@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5"
+    tools:context=".MainActivity">
+
+    <!-- Header Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator Sederhana"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Display Result Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasil Perhitungan:"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:gravity="center"
+            android:background="#f8f9fa"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <!-- Input Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masukkan Angka:"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Input Angka Pertama -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Angka 1:"
+                android:textSize="14sp"
+                android:gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/editTextAngka1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="2"
+                android:hint="Masukkan angka pertama"
+                android:inputType="numberDecimal|numberSigned"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:background="@drawable/edit_text_background" />
+
+        </LinearLayout>
+
+        <!-- Input Angka Kedua -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Angka 2:"
+                android:textSize="14sp"
+                android:gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/editTextAngka2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="2"
+                android:hint="Masukkan angka kedua"
+                android:inputType="numberDecimal|numberSigned"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:background="@drawable/edit_text_background" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Operation Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Operasi:"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Row 1: Penjumlahan dan Pengurangan -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/buttonTambah"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="+ Tambah"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/buttonKurang"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="- Kurang"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#FF9800"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+        <!-- Row 2: Perkalian dan Pembagian -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/buttonKali"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="× Kali"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#2196F3"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/buttonBagi"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="÷ Bagi"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#9C27B0"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+        <!-- Clear Button -->
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Clear / Reset"
+            android:textSize="14sp"
+            android:backgroundTint="#F44336"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+</LinearLayout>
