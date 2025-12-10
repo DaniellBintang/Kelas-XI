@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Aplikasi Monitoring Kelas</string>
+    <string name="title_activity_siswa">SiswaActivity</string>
+    <string name="title_activity_kurikulum">KurikulumActivity</string>
+    <string name="title_activity_kepala_sekolah">KepalaSekolahActivity</string>
+    <string name="title_activity_admin">AdminActivity</string>
+</resources>

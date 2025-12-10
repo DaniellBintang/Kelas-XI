@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Localhost untuk emulator -->
+        <domain includeSubdomains="true">10.0.2.2</domain>
+
+        <!-- IP komputer dengan port 8000 -->
+        <domain includeSubdomains="true">192.168.1.7</domain>
+
+        <!-- Range IP lokal -->
+        <domain includeSubdomains="true">192.168.1.0</domain>
+
+        <!-- ✅ TAMBAHKAN: IP komputer baru Anda -->
+        <domain includeSubdomains="true">192.168.40.144</domain>
+
+        <domain includeSubdomains="true">192.168.1.10</domain>
+
+        <domain includeSubdomains="true">192.168.1.4</domain>
+
+        <domain includeSubdomains="true">192.168.40.7</domain>
+
+        <domain includeSubdomains="true">192.168.1.9</domain>
+
+        <domain includeSubdomains="true">192.168.40.15</domain>
+
+
+
+
+
+
+
+        <!-- Localhost -->
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+    </domain-config>
+</network-security-config>
